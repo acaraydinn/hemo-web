@@ -16,34 +16,43 @@
                 <span class="logo-text">HEMO</span>
             </a>
         </div>
+        <div class="nav-links">
+            <a href="yasal.html" class="nav-link-item">Yasal Bilgiler</a>
+            <a href="destek.html" class="support-btn" style="border-color:var(--secondary); color:var(--secondary);"><i class="fa-solid fa-headset"></i> Destek</a>
+        </div>
     </nav>
 
     <div class="contact-wrapper">
         <div class="contact-form">
             <h2 style="margin-bottom: 10px;">Topluluk Desteği</h2>
-            <p style="color: var(--text-muted); margin-bottom: 30px;">Teknik sorunlar, öneriler veya kurumsal işbirlikleri için bize yazın.</p>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Teknik sorunlar veya işbirlikleri için bize yazın.</p>
             
-            <form action="mailto:destek@hemoapp.com" method="post" enctype="text/plain">
+            <form action="https://formspree.io/f/BURAYA_LINK_GELECEK" method="POST">
+                
                 <div class="form-group">
                     <label>Ad Soyad</label>
-                    <input type="text" placeholder="Örn: Mehmet Demir" required>
+                    <input type="text" name="name" placeholder="Örn: Mehmet Demir" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>E-Posta (OTP Doğrulaması için)</label>
-                    <input type="email" placeholder="ornek@hemo.com" required>
+                    <label>E-Posta (Size dönebilmemiz için)</label>
+                    <input type="email" name="email" placeholder="ornek@hemo.com" required>
                 </div>
+                
                 <div class="form-group">
                     <label>Konu</label>
-                    <select style="width:100%; padding:12px; background:var(--dark-bg); border:1px solid rgba(255,255,255,0.1); color:white; border-radius:8px;">
-                        <option>Teknik Destek</option>
-                        <option>Öneri / Geri Bildirim</option>
-                        <option>Hatalı İlan Bildirimi</option>
+                    <select name="subject" style="width:100%;">
+                        <option value="teknik">Teknik Destek</option>
+                        <option value="oneri">Öneri / Geri Bildirim</option>
+                        <option value="sikayet">Hatalı İlan Bildirimi</option>
                     </select>
                 </div>
+                
                 <div class="form-group">
                     <label>Mesajınız</label>
-                    <textarea rows="5" placeholder="Size nasıl yardımcı olabiliriz?" required></textarea>
+                    <textarea name="message" rows="5" placeholder="Size nasıl yardımcı olabiliriz?" required></textarea>
                 </div>
+                
                 <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Gönder <i class="fa-solid fa-paper-plane"></i></button>
             </form>
         </div>
