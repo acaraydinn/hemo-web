@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMO - Bize Ulaşın</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html" style="text-decoration:none; display:flex; align-items:center; gap:12px;">
+                <img src="logo.jpg" alt="Hemo Logo" class="nav-logo">
+                <span class="logo-text">HEMO</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="contact-wrapper">
+        <div class="contact-form">
+            <h2 style="margin-bottom: 10px;">Topluluk Desteği</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Teknik sorunlar, öneriler veya kurumsal işbirlikleri için bize yazın.</p>
+            
+            <form action="mailto:destek@hemoapp.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label>Ad Soyad</label>
+                    <input type="text" placeholder="Örn: Mehmet Demir" required>
+                </div>
+                <div class="form-group">
+                    <label>E-Posta (OTP Doğrulaması için)</label>
+                    <input type="email" placeholder="ornek@hemo.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Konu</label>
+                    <select style="width:100%; padding:12px; background:var(--dark-bg); border:1px solid rgba(255,255,255,0.1); color:white; border-radius:8px;">
+                        <option>Teknik Destek</option>
+                        <option>Öneri / Geri Bildirim</option>
+                        <option>Hatalı İlan Bildirimi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mesajınız</label>
+                    <textarea rows="5" placeholder="Size nasıl yardımcı olabiliriz?" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Gönder <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
