@@ -193,8 +193,26 @@ export default function IlanDetayPage() {
                                 <div className="flex items-start">
                                     <User className="w-5 h-5 text-gray-400 mt-1 mr-3" />
                                     <div>
+                                        <p className="text-sm text-gray-500">Hasta Adı Soyadı</p>
+                                        <p className="font-medium text-gray-900">{request.patient_first_name} {request.patient_last_name}</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start">
+                                    <User className="w-5 h-5 text-gray-400 mt-1 mr-3" />
+                                    <div>
                                         <p className="text-sm text-gray-500">Hasta Yakını</p>
                                         <p className="font-medium text-gray-900">{request.first_name} {request.last_name}</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start">
+                                    <Phone className="w-5 h-5 text-gray-400 mt-1 mr-3" />
+                                    <div>
+                                        <p className="text-sm text-gray-500">İletişim Numarası</p>
+                                        <a href={`tel:${request.contact_phone}`} className="font-medium text-red-600 hover:underline">
+                                            {request.contact_phone}
+                                        </a>
                                     </div>
                                 </div>
 
