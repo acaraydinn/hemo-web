@@ -116,8 +116,8 @@ export default function IlanlarPage() {
                                     setShowFilters(false);
                                 }}
                                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${selectedCity === city
-                                        ? 'bg-red-600 text-white'
-                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                    ? 'bg-red-600 text-white'
+                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                     }`}
                             >
                                 {city}
@@ -153,7 +153,7 @@ export default function IlanlarPage() {
                             className="bg-white rounded-xl border p-5 hover:shadow-lg transition-all group"
                         >
                             <div className="flex items-start justify-between">
-                                <Link href={`/panel/ilan/${ad.id}`} className="flex items-start flex-1">
+                                <Link href={`/ilan/${ad.id}`} className="flex items-start flex-1">
                                     <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg mr-4">
                                         {ad.blood_type}
                                     </div>

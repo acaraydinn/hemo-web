@@ -201,7 +201,7 @@ export default function PanelPage() {
                         recentAds.map((ad) => (
                             <Link
                                 key={ad.id}
-                                href={`/panel/ilan/${ad.id}`}
+                                href={`/ilan/${ad.id}`}
                                 className="flex items-center p-4 hover:bg-gray-50 transition-colors"
                             >
                                 <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 font-bold mr-4">
