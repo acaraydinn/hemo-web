@@ -52,7 +52,7 @@ export default function PanelPage() {
             // Refresh user data from API
             const { data: freshUser } = await userAPI.getProfile(storedUser.phone);
             if (freshUser) {
-                authUtils.updatePoints(freshUser.points);
+                authUtils.updateStats(freshUser.points, freshUser.badge);
                 setUser(prev => prev ? { ...prev, points: freshUser.points, badge: freshUser.badge } : null);
             }
 

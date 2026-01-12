@@ -29,7 +29,7 @@ export default function ProfilPage() {
             // Get fresh user data
             const { data: freshUser } = await userAPI.getProfile(storedUser.phone);
             if (freshUser) {
-                authUtils.updatePoints(freshUser.points);
+                authUtils.updateStats(freshUser.points, freshUser.badge);
                 setUser({
                     firstName: freshUser.first_name,
                     lastName: freshUser.last_name,

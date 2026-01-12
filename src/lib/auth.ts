@@ -47,7 +47,17 @@ export const authUtils = {
         Cookies.remove(PHONE_COOKIE_KEY);
     },
 
-    // Update user points
+    // Update user stats (points and badge)
+    updateStats: (points: number, badge: string) => {
+        const user = authUtils.getUser();
+        if (user) {
+            user.points = points;
+            user.badge = badge;
+            authUtils.saveUser(user);
+        }
+    },
+
+    // Legacy support (updates points only)
     updatePoints: (points: number) => {
         const user = authUtils.getUser();
         if (user) {
