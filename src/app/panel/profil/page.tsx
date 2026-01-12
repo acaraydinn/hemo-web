@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { User, Heart, Droplets, Clock, Trophy, CheckCircle } from 'lucide-react';
 import { authUtils } from '@/lib/auth';
@@ -168,16 +169,18 @@ export default function ProfilPage() {
                     ) : (
                         <div className="divide-y">
                             {activeAds.map((ad) => (
-                                <div key={ad.id} className="p-4 flex items-center">
-                                    <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 font-bold mr-4">
-                                        {ad.blood_type}
+                                <Link key={ad.id} href={`/ilan/${ad.id}`} className="block hover:bg-gray-50 transition-colors">
+                                    <div className="p-4 flex items-center">
+                                        <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 font-bold mr-4">
+                                            {ad.blood_type}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <p className="font-medium text-gray-900 truncate">{ad.hospital}</p>
+                                            <p className="text-sm text-gray-500">{ad.city} / {ad.district}</p>
+                                        </div>
+                                        <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Aktif</span>
                                     </div>
-                                    <div className="flex-1 min-w-0">
-                                        <p className="font-medium text-gray-900 truncate">{ad.hospital}</p>
-                                        <p className="text-sm text-gray-500">{ad.city} / {ad.district}</p>
-                                    </div>
-                                    <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Aktif</span>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     )
@@ -192,16 +195,18 @@ export default function ProfilPage() {
                     ) : (
                         <div className="divide-y">
                             {pastAds.map((ad) => (
-                                <div key={ad.id} className="p-4 flex items-center opacity-75">
-                                    <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-gray-600 font-bold mr-4">
-                                        {ad.blood_type}
+                                <Link key={ad.id} href={`/ilan/${ad.id}`} className="block hover:bg-gray-50 transition-colors">
+                                    <div className="p-4 flex items-center opacity-75">
+                                        <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-gray-600 font-bold mr-4">
+                                            {ad.blood_type}
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <p className="font-medium text-gray-900 truncate">{ad.hospital}</p>
+                                            <p className="text-sm text-gray-500">{getProductDisplayName(ad.blood_product)}</p>
+                                        </div>
+                                        <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Tamamlandı</span>
                                     </div>
-                                    <div className="flex-1 min-w-0">
-                                        <p className="font-medium text-gray-900 truncate">{ad.hospital}</p>
-                                        <p className="text-sm text-gray-500">{getProductDisplayName(ad.blood_product)}</p>
-                                    </div>
-                                    <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Tamamlandı</span>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     )
