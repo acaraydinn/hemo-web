@@ -85,6 +85,11 @@ export default function RegisterPage() {
             }
 
             if (data) {
+                if (data.error) {
+                    setError(`Kayıt oldu ancak mail hatası: ${data.error}`);
+                    setIsLoading(false);
+                    return;
+                }
                 // Redirect to OTP verification
                 router.push(`/otp-dogrulama?phone=${formData.phone}`);
             }

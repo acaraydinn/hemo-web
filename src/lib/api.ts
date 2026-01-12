@@ -56,7 +56,7 @@ export const authAPI = {
         blood_type: string;
         password: string;
     }) => {
-        return apiRequest<{ message: string; phone: string }>('/register/', {
+        return apiRequest<{ message: string; phone: string; error?: string }>('/register/', {
             method: 'POST',
             body: JSON.stringify(data),
         });
