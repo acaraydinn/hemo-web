@@ -114,6 +114,10 @@ export const bloodRequestAPI = {
         return apiRequest<BloodRequest[]>(url);
     },
 
+    getById: async (id: number) => {
+        return apiRequest<BloodRequest>(`/blood-requests/${id}/`);
+    },
+
     create: async (data: {
         user_phone: string;
         patient_first_name: string;

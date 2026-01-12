@@ -184,6 +184,27 @@ body {
   border-radius: 2px;
 }
 
+/* Input Base Styles */
+input,
+textarea,
+select {
+  color: #171717;
+  /* Dark text for visibility */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Opaque white background */
+}
+
+/* Dark mode override if needed */
+@media (prefers-color-scheme: dark) {
+
+  input,
+  textarea,
+  select {
+    color: #000000;
+    /* Force black text even in dark mode if background is white */
+  }
+}
+
 /* Input Focus Effect */
 input:focus,
 textarea:focus,
@@ -191,6 +212,7 @@ select:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.15);
+  background-color: #ffffff;
 }
 
 /* Statistics Counter */
