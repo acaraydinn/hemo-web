@@ -126,6 +126,28 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
+
+                {/* Buy Me a Coffee - Support Section */}
+                <div className="mt-12 pt-8 border-t border-gray-800">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center">
+                        <div className="flex items-center gap-3">
+                            <span className="text-3xl">☕</span>
+                            <div className="text-left">
+                                <p className="text-white font-semibold">Hemo&apos;yu Destekle</p>
+                                <p className="text-gray-400 text-sm">Uygulamanın geliştirilmesine katkıda bulun</p>
+                            </div>
+                        </div>
+                        <a
+                            href="https://buymeacoffee.com/Hemoapp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-gray-900 font-bold px-6 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg"
+                        >
+                            <span className="text-xl">☕</span>
+                            Bize Kahve Ismarla
+                        </a>
+                    </div>
+                </div>
             </div>
 
             {/* Bottom Bar */}
