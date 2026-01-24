@@ -87,35 +87,7 @@ export default function HeroSection() {
                             </Link>
                         </motion.div>
 
-                        {/* Stats */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6 }}
-                            className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/10"
-                        >
-                            <div className="text-center lg:text-left">
-                                <div className="flex items-center justify-center lg:justify-start space-x-2 mb-2">
-                                    <Droplets className="text-red-400" size={24} />
-                                    <span className="text-3xl font-bold text-white">1000+</span>
-                                </div>
-                                <p className="text-white/60 text-sm">Aktif İlan</p>
-                            </div>
-                            <div className="text-center lg:text-left">
-                                <div className="flex items-center justify-center lg:justify-start space-x-2 mb-2">
-                                    <Users className="text-red-400" size={24} />
-                                    <span className="text-3xl font-bold text-white">5000+</span>
-                                </div>
-                                <p className="text-white/60 text-sm">Kahraman</p>
-                            </div>
-                            <div className="text-center lg:text-left">
-                                <div className="flex items-center justify-center lg:justify-start space-x-2 mb-2">
-                                    <Clock className="text-red-400" size={24} />
-                                    <span className="text-3xl font-bold text-white">24/7</span>
-                                </div>
-                                <p className="text-white/60 text-sm">Aktif Destek</p>
-                            </div>
-                        </motion.div>
+
                     </motion.div>
 
                     {/* Right Content - Blood Type Card Animation */}

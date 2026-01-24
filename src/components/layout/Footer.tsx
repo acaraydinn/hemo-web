@@ -91,17 +91,19 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li className="flex items-center space-x-3 text-gray-400">
                                 <Mail size={18} className="text-red-400" />
-                                <a href="mailto:destek@hemo.com.tr" className="hover:text-white transition-colors">
-                                    destek@hemo.com.tr
+                                <a href="mailto:hemo@socialrate.net" className="hover:text-white transition-colors">
+                                    hemo@socialrate.net
                                 </a>
                             </li>
                             <li className="flex items-center space-x-3 text-gray-400">
                                 <Phone size={18} className="text-red-400" />
-                                <span>+90 850 XXX XX XX</span>
+                                <a href="tel:+905383036001" className="hover:text-white transition-colors">
+                                    +90 538 303 60 01
+                                </a>
                             </li>
                             <li className="flex items-start space-x-3 text-gray-400">
                                 <MapPin size={18} className="text-red-400 mt-1" />
-                                <span>Türkiye</span>
+                                <span>Adana, Türkiye</span>
                             </li>
                         </ul>
 
